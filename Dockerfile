@@ -3,7 +3,7 @@ USER root
 
 WORKDIR /usr/src/app
 
-COPY /src/package*.json ./
+COPY /package*.json ./
 
 RUN npm install
 
@@ -11,4 +11,4 @@ COPY ./src/ .
 
 EXPOSE 8000
 
-CMD [ "node", "index.js" ]
+CMD [ "npm", "run", "start" ]
