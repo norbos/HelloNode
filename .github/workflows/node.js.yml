@@ -31,13 +31,13 @@ jobs:
     - run: npm run build --if-present
     #- run: npm test
 
-    # - name: Build and Push Docker Image
-    #   uses: mr-smithers-excellent/docker-build-push@v5
-    #   with:
-    #     image: norbos/utility
-    #     registry: docker.io
-    #     username: ${{ secrets.DOCKER_USERNAME }}
-    #     password: ${{ secrets.DOCKER_PASSWORD }}
+    - name: Build and Push Docker Image
+      uses: mr-smithers-excellent/docker-build-push@v5
+      with:
+        image: norbos/hello-node
+        registry: docker.io
+        username: ${{ secrets.DOCKER_USERNAME }}
+        password: ${{ secrets.DOCKER_PASSWORD }}
 
   build-pr:
     runs-on: ubuntu-latest
