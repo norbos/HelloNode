@@ -4,7 +4,7 @@ var app = express();
 
 app.get('/', function (req, res) {
     console.log(`Requesting now from: ${req.hostname}`);
-    res.send('Hello World! Updated Message');
+    res.send('Hello World! Updated Message. V2');
 });
 
 app.listen(8000, function () {
